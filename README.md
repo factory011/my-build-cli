@@ -18,9 +18,19 @@
 
 + 注册npm账户
 
-+ npm adduser
++ `npm adduser`
 
-+ npm publish
++ `npm publish`
+
+  到这一步基本发布成功，载NPM官网个人资料中可以看到发布的包
+
++ 上传后可以设置成原先的地址
+
+  ```
+  npm config set registry=https://registry.npm.taobao.org/
+  ```
+
+  
 
 
 
