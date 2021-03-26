@@ -30,6 +30,13 @@
   npm config set registry=https://registry.npm.taobao.org/
   ```
 
+### 本地调试运行
+
++ npm-link 
+  安装到本地
++ my-build-cli init projectName
+  执行代码
+
   
 
 ### 发布成功后使用方法
