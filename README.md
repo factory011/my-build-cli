@@ -1,4 +1,4 @@
-# vue-cli-npm
+# my-build-cli
 
 ## npm发布
 
@@ -16,7 +16,7 @@
   npm config set registry=http://registry.npmjs.org
   ```
 
-+ 注册npm账户
++ 注册/登录npm账户
 
 + `npm adduser`
 
@@ -37,13 +37,13 @@
 + 全局安装npm包
 
   ```
-  npm i vue-rem-cli -g
+  npm i my-build-cli -g
   ```
 
 + 创建项目
 
   ```
-  vue-cli init vue-pc-demo
+  my-build-cli init projectName
   ```
 
   

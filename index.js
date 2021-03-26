@@ -23,14 +23,25 @@ program.version('1.0.0', '-v, --version')
                                 },
                                 {
                                         name: 'template',
-                                        message: '请输入模板类型（pc/mobile）：'
+                                        message: '请输入模板类型（mobile-vue-vant/pc-vue-element）：'
                                 }
                         ]).then((answers) => {
                                 const spinner = ora('正在下载模板...');
                                 spinner.start();
-                                const template_mobile = 'https://github.com:factory011/vue-app-rem-template#master';
-                                const template_pc = 'https://github.com:factory011/vue-pc-template#master';
-                                const TEMPLATE = answers.template === 'pc' ? template_pc : template_mobile;
+                                const template_mobile_vue_vant = 'https://github.com:factory011/vue-app-rem-template#master';
+                                const template_pc_vue_element = 'https://github.com:factory011/vue-pc-template#master';
+                                // const TEMPLATE = answers.template === 'pc' ? template_pc : template_mobile;
+                                let TEMPLATE = '';
+                                switch (answers.template) {
+                                        case 'mobile-vue-vant':
+                                                TEMPLATE = template_mobile_vue_vant
+                                                break;
+                                        case 'pc-vue-element':
+                                                TEMPLATE = template_pc_vue_element
+                                                break;
+                                        default:
+                                                break;
+                                }
                                 download(TEMPLATE, name, { clone: true }, (err) => {
                                         if (err) {
                                                 spinner.fail();
